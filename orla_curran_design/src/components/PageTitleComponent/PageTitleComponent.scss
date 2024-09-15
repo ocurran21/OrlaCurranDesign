@@ -1,9 +1,12 @@
+$titleSize: 128px;
+$titleLineHeight: 88px;
+
 .title {
     font-family: "Modak", system-ui;
     font-weight: 400;
     font-style: normal;
-    font-size: 128px;
-    line-height: 0.6875;
+    font-size: $titleSize;
+    line-height: $titleLineHeight/$titleSize;
     width: 480px;
     transform: skewY(-16deg);
     text-align: center;

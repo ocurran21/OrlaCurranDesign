@@ -1,3 +1,5 @@
+$homeBackgroundColour: #e13232;
+
 .titleContainer {
     display: flex;
     justify-content: center;
@@ -6,5 +8,5 @@
 }
 
 body {
-    background-color: #e13232;
+    background-color: $homeBackgroundColour;
 }

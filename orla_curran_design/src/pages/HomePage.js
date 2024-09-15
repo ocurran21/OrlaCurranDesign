@@ -1,6 +1,6 @@
 import React from 'react';
 import PageTitleComponent from "../components/PageTitleComponent/PageTitleComponent";
-import "./HomePage.css"
+import "./HomePage.scss"
 
 const HomePage = () => {
     return (
