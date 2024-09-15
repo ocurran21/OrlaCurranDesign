@@ -6,8 +6,8 @@ import SidebarComponent from "../components/SidebarComponent/SidebarComponent";
 const HomePage = () => {
     return (
         <header className="titleContainer">
-            <PageTitleComponent/>
             <SidebarComponent/>
+            <PageTitleComponent/>
         </header>
     );
 };

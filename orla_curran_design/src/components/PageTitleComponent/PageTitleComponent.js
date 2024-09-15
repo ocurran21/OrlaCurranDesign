@@ -43,6 +43,8 @@ const PageTitle = () => {
         document.body.style.backgroundColor = getBackgroundColour(currentColours);
         let title = document.getElementsByClassName('title')[0];
         title.style.color = getAssociatedSecondaryColour(currentColours);
+        document.getElementsByClassName("sidebarContainer")[0].style.backgroundColor = getAssociatedSecondaryColour(currentColours);
+        document.getElementsByClassName("sidebarContainer")[0].style.color = getBackgroundColour(currentColours);
         setPrevColours(currentColours);
     }, []);
 

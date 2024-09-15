@@ -1,9 +1,23 @@
 import React from 'react';
+import "./SidebarComponent.scss"
 
-function SidebarComponent() {
+const SidebarComponent = () => {
     return (
-        <button></button>
+        // <button onClick="openSidebar()">
+        //     ->
+        // </button>
+        <div className="sidebarContainer">
+            <ul>
+                <li>HOME</li>
+                <li>GALLERY</li>
+                <li>ABOUT</li>
+            </ul>
+        </div>
     );
+}
+
+const openSidebar = () => {
+
 }
 
 export default SidebarComponent;
