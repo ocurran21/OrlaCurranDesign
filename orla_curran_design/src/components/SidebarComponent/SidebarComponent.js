@@ -9,8 +9,8 @@ const SidebarComponent = () => {
         <div className="sidebarContainer">
             <ul>
                 <li>HOME</li>
-                <li>GALLERY</li>
-                <li>ABOUT</li>
+                <li className="navSpacing">GALLERY</li>
+                <li className="navSpacing">ABOUT</li>
             </ul>
         </div>
     );

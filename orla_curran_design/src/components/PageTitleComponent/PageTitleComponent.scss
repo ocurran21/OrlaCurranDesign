@@ -11,3 +11,9 @@ $titleLineHeight: 88px;
     transform: skewY(-16deg);
     text-align: center;
 }
+
+.titleContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
