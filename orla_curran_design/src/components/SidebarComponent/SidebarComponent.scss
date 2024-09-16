@@ -19,13 +19,20 @@ ul {
     margin-top: 60px;
 }
 
-.closeSidebarButton {
+button {
     width: 60px;
     height: 60px;
     position: fixed;
     top: 32px;
-    left: 388px;
     cursor: pointer;
     border: none;
     background: none;
+}
+
+.closeSidebarButton {
+    left: 388px;
+}
+
+.openSidebarButton {
+    left: 32px;
 }

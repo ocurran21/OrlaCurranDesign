@@ -11,9 +11,13 @@ const SidebarComponent = () => {
         setShowSidebar(false);
     }
 
+    const openSidebar = () => {
+        setShowSidebar(true);
+    }
+
     return (
         <div>
-            { showSidebar &&
+            {showSidebar ?
                 <div className="sidebarContainer">
                     <ul>
                         <li>HOME</li>
@@ -23,7 +27,10 @@ const SidebarComponent = () => {
                     <button className="closeSidebarButton" onClick={closeSidebar}>
                         <img src={closeArrow} alt="Close Sidebar"></img>
                     </button>
-                </div>
+                </div> :
+                <button className="openSidebarButton" onClick={openSidebar}>
+                    <img src={closeArrow} alt="Open Sidebar"></img>
+                </button>
             }
         </div>
     );

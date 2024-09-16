@@ -1,7 +1,8 @@
-import PageTitleComponent from "../components/PageTitleComponent/PageTitleComponent";
+import PageTitleComponent from "../../components/PageTitleComponent/PageTitleComponent";
 import "./HomePage.scss"
-import SidebarComponent from "../components/SidebarComponent/SidebarComponent";
-import {useState, useEffect} from "react";
+import SidebarComponent from "../../components/SidebarComponent/SidebarComponent";
+import React, {useState, useEffect} from "react";
+import closeArrow from "../../resources/images/buttonImages/closeSidebar/arrowOrange.png";
 
 const redHomePageColours = ['#e13232','#fba4b2','#ffffff']
 const tealHomePageColours = ['#0d4647','#faf5d8','#70d0bd']
