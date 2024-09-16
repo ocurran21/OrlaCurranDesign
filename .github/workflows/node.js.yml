@@ -5,6 +5,9 @@ on:
     branches:
       - develop
 
+env:
+  CI: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
