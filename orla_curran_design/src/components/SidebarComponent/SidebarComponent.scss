@@ -18,3 +18,14 @@ ul {
 .navSpacing {
     margin-top: 60px;
 }
+
+.closeSidebarButton {
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    top: 32px;
+    left: 388px;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
