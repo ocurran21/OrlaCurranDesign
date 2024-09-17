@@ -40,7 +40,7 @@ const dynamicClassName = (currentColours) => {
         case orangeHomePageColour:
             return "orangeStyle";
         default:
-            return "redStyle";
+            return "defaultStyle";
     }
 }
 
@@ -52,7 +52,7 @@ const HomePage = () => {
     useEffect(() => {
         currentColours = getRandomColours();
         setColourClassName(dynamicClassName(currentColours));
-        document.body.style.backgroundColor = currentColours;
+        document.getElementsByClassName('homeContainer')[0].style.backgroundColor = currentColours;
     }, []);
 
     return (

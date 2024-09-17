@@ -1,5 +1,8 @@
 import React, {useState} from 'react';
+import {Link} from "react-router-dom";
+
 import "./SidebarComponent.scss"
+
 import closeArrowRed from "../../resources/images/buttonImages/closeSidebar/LeftArrowRed.png"
 import openArrowRed from "../../resources/images/buttonImages/openSidebar/RightArrowRed.png"
 import closeArrowTeal from "../../resources/images/buttonImages/closeSidebar/LeftArrowTeal.png"
@@ -12,6 +15,8 @@ import closeArrowGreen from "../../resources/images/buttonImages/closeSidebar/Le
 import openArrowGreen from "../../resources/images/buttonImages/openSidebar/RightArrowGreen.png"
 import closeArrowOrange from "../../resources/images/buttonImages/closeSidebar/LeftArrowOrange.png"
 import openArrowOrange from "../../resources/images/buttonImages/openSidebar/RightArrowOrange.png"
+import closeArrowGrey from "../../resources/images/buttonImages/closeSidebar/LeftArrowGrey.png"
+import openArrowGrey from "../../resources/images/buttonImages/openSidebar/RightArrowGrey.png"
 
 const getButtonImage = (colourClassName) => {
     switch (colourClassName.colourClassName) {
@@ -28,7 +33,7 @@ const getButtonImage = (colourClassName) => {
         case "orangeStyle":
             return [closeArrowOrange, openArrowOrange];
         default:
-            return [closeArrowRed, openArrowRed];
+            return [closeArrowGrey, openArrowGrey];
     }
 }
 
@@ -44,14 +49,16 @@ const SidebarComponent = (colourClassName) => {
     }
 
     return (
-        <div className={colourClassName.colourClassName}>
+        <div className={colourClassName.colourClassName ? colourClassName.colourClassName : "defaultSidebar"}>
             {showSidebar ?
                 <div className="sidebarContainer">
-                    <ul>
-                        <li className="currentPage">HOME</li>
-                        <li className="navSpacing">GALLERY</li>
-                        <li className="navSpacing">ABOUT</li>
-                    </ul>
+                    <nav>
+                        <ul>
+                            <li className="currentPage"><Link to="/">HOME</Link></li>
+                            <li className="navSpacing"><Link to="/gallery">GALLERY</Link></li>
+                            <li className="navSpacing"><Link to="/about">ABOUT</Link></li>
+                        </ul>
+                    </nav>
                     <button className="closeSidebarButton" onClick={closeSidebar}>
                         <img src={getButtonImage(colourClassName)[0]} alt="Close Sidebar"></img>
                     </button>

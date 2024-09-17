@@ -19,6 +19,11 @@ ul {
     margin-top: 60px;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 button {
     width: 60px;
     height: 60px;
@@ -88,5 +93,15 @@ button {
 
     .currentPage {
         color: #eec326;
+    }
+}
+
+.defaultSidebar {
+    width: 480px;
+    color: #2d353b;
+    background-color: #6f777c;
+
+    .currentPage {
+        color: #ffffff;
     }
 }
