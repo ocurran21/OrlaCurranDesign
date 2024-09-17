@@ -2,57 +2,63 @@ import PageTitleComponent from "../../components/PageTitleComponent/PageTitleCom
 import "./HomePage.scss"
 import SidebarComponent from "../../components/SidebarComponent/SidebarComponent";
 import React, {useState, useEffect} from "react";
-import closeArrow from "../../resources/images/buttonImages/closeSidebar/arrowOrange.png";
 
-const redHomePageColours = ['#e13232','#fba4b2','#ffffff']
-const tealHomePageColours = ['#0d4647','#faf5d8','#70d0bd']
-const purpleHomePageColours = ['#956fc7','#fbcea4','#592693']
-const blueHomePageColours = ['#101e6d','#d590f5','#ffffff']
-const greenHomePageColours = ['#4a8d3f','#a0f4e3','#17a4f6']
-const orangeHomePageColours = ['#e9873b','#faebc3','#eec326']
+const redHomePageColour = '#e13232';
+const tealHomePageColour = '#0d4647';
+const purpleHomePageColour = '#956fc7';
+const blueHomePageColour = '#101e6d';
+const greenHomePageColour = '#4a8d3f';
+const orangeHomePageColour = '#e9873b';
 
-const getRandomColours = (prevColours) => {
-    const colourLists = [redHomePageColours,tealHomePageColours,
-        purpleHomePageColours,blueHomePageColours,greenHomePageColours,orangeHomePageColours]
-    let randomIndex;
-    let currentColours;
-    do {
-        randomIndex = Math.floor(Math.random() * colourLists.length);
-        currentColours = colourLists[randomIndex];
-    } while (prevColours === currentColours)
-    return currentColours;
+const getRandomColours = () => {
+    const colourList = [
+        redHomePageColour,
+        tealHomePageColour,
+        purpleHomePageColour,
+        blueHomePageColour,
+        greenHomePageColour,
+        orangeHomePageColour
+    ];
+
+    const randomIndex = Math.floor(Math.random() * colourList.length);
+
+    return colourList[randomIndex];
 }
 
-const getBackgroundColour = (currentColours) => {
-    return currentColours[0];
-}
-
-const getAssociatedSecondaryColour = (currentColours) => {
-    return currentColours[1];
-}
-
-const getAssociatedTertiaryColour = (currentColours) => {
-    return currentColours[2];
+const dynamicClassName = (currentColours) => {
+    switch (currentColours) {
+        case redHomePageColour:
+            return "redStyle";
+        case tealHomePageColour:
+            return "tealStyle";
+        case purpleHomePageColour:
+            return "purpleStyle";
+        case blueHomePageColour:
+            return "blueStyle";
+        case greenHomePageColour:
+            return "greenStyle";
+        case orangeHomePageColour:
+            return "orangeStyle";
+        default:
+            return "redStyle";
+    }
 }
 
 const HomePage = () => {
-    const [prevColours, setPrevColours] = useState('');
-    let currentColours = [];
+    const [colourClassName, setColourClassName] = useState('');
+    const titleClassName = colourClassName + "Title";
+    let currentColours = "";
 
     useEffect(() => {
-        currentColours = getRandomColours(prevColours);
-        document.body.style.backgroundColor = getBackgroundColour(currentColours);
-        let title = document.getElementsByClassName('title')[0];
-        title.style.color = getAssociatedSecondaryColour(currentColours);
-        document.getElementsByClassName("sidebarContainer")[0].style.backgroundColor = getAssociatedSecondaryColour(currentColours);
-        document.getElementsByClassName("sidebarContainer")[0].style.color = getBackgroundColour(currentColours);
-        setPrevColours(currentColours);
+        currentColours = getRandomColours();
+        setColourClassName(dynamicClassName(currentColours));
+        document.body.style.backgroundColor = currentColours;
     }, []);
 
     return (
         <header className="homeContainer">
-            <SidebarComponent/>
-            <PageTitleComponent/>
+            <SidebarComponent colourClassName={colourClassName}/>
+            <PageTitleComponent colourClassName={titleClassName}/>
         </header>
     );
 };

@@ -2,9 +2,7 @@ import React, {useState} from 'react';
 import "./SidebarComponent.scss"
 import closeArrow from "../../resources/images/buttonImages/closeSidebar/arrowOrange.png"
 
-let showSidebar = true;
-
-const SidebarComponent = () => {
+const SidebarComponent = (colourClassName) => {
     const [showSidebar, setShowSidebar] = useState(true);
 
     const closeSidebar = () => {
@@ -16,7 +14,7 @@ const SidebarComponent = () => {
     }
 
     return (
-        <div>
+        <div className={colourClassName.colourClassName}>
             {showSidebar ?
                 <div className="sidebarContainer">
                     <ul>

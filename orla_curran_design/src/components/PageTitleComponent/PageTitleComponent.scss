@@ -1,19 +1,43 @@
 $titleSize: 128px;
 $titleLineHeight: 88px;
 
-.title {
-    font-family: "Modak", system-ui;
-    font-weight: 400;
-    font-style: normal;
-    font-size: $titleSize;
-    line-height: $titleLineHeight/$titleSize;
-    width: 480px;
-    transform: skewY(-16deg);
-    text-align: center;
-}
-
 .titleContainer {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    h1 {
+        font-family: "Modak", system-ui;
+        font-weight: 400;
+        font-style: normal;
+        font-size: $titleSize;
+        line-height: $titleLineHeight/$titleSize;
+        width: 480px;
+        transform: skewY(-16deg);
+        text-align: center;
+    }
+}
+
+.redStyleTitle {
+    color: #fba4b2;
+}
+
+.tealStyleTitle {
+    color: #faf5d8;
+}
+
+.purpleStyleTitle {
+    color: #fbcea4;
+}
+
+.blueStyleTitle {
+    color: #d590f5;
+}
+
+.greenStyleTitle {
+    color: #a0f4e3;
+}
+
+.orangeStyleTitle {
+    color: #faebc3;
 }
