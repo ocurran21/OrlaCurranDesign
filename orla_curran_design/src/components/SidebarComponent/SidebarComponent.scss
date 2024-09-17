@@ -130,3 +130,15 @@ button {
         color: #ffffff;
     }
 }
+
+@media (max-width: 1000px) {
+    .defaultSidebar {
+        width: 360px;
+    }
+}
+
+@media (max-width: 860px) {
+    .defaultSidebar {
+        width: 100vw;
+    }
+}
