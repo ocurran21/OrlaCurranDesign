@@ -1,7 +1,9 @@
 import React, {useState} from 'react';
-import {Link} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 
 import "./SidebarComponent.scss"
+
+import classNames from 'classnames';
 
 import closeArrowRed from "../../resources/images/buttonImages/closeSidebar/LeftArrowRed.png"
 import openArrowRed from "../../resources/images/buttonImages/openSidebar/RightArrowRed.png"
@@ -37,6 +39,33 @@ const getButtonImage = (colourClassName) => {
     }
 }
 
+function NavBarOptions () {
+    const location = useLocation();
+
+    const getPage = () => {
+        switch (location.pathname) {
+            case "/":
+                return "home";
+            case "/gallery":
+                return "gallery";
+            case "/about":
+                return "about";
+            default:
+                return "home";
+        }
+    }
+
+    const listGalleryClass = classNames("navSpacing", getPage() === 'gallery' ? "currentPage": "");
+    const listAboutClass = classNames("navSpacing", getPage() === 'about' ? "currentPage": "");
+
+    return (
+        <ul>
+            <li className={getPage() === 'home' ? "currentPage" : ""}><Link to="/">HOME</Link></li>
+            <li className={listGalleryClass}><Link to="/gallery">GALLERY</Link></li>
+            <li className={listAboutClass}><Link to="/about">ABOUT</Link></li>
+        </ul>)
+}
+
 const SidebarComponent = (colourClassName) => {
     const [showSidebar, setShowSidebar] = useState(false);
 
@@ -53,11 +82,7 @@ const SidebarComponent = (colourClassName) => {
             {showSidebar ?
                 <div className="sidebarContainer">
                     <nav>
-                        <ul>
-                            <li className="currentPage"><Link to="/">HOME</Link></li>
-                            <li className="navSpacing"><Link to="/gallery">GALLERY</Link></li>
-                            <li className="navSpacing"><Link to="/about">ABOUT</Link></li>
-                        </ul>
+                        <NavBarOptions/>
                     </nav>
                     <button className="closeSidebarButton" onClick={closeSidebar}>
                         <img src={getButtonImage(colourClassName)[0]} alt="Close Sidebar"></img>
