@@ -1,5 +1,7 @@
-$titleSize: 128px;
-$titleLineHeight: 88px;
+$titleSizeDesktop: 128px;
+$titleSizeMobile: 96px;
+$titleLineHeightDesktop: 88px;
+$titleLineHeightMobile: 64px;
 
 .titleContainer {
     display: flex;
@@ -11,13 +13,23 @@ $titleLineHeight: 88px;
         font-family: "Modak", system-ui;
         font-weight: 400;
         font-style: normal;
-        font-size: $titleSize;
-        line-height: $titleLineHeight/$titleSize;
+        font-size: $titleSizeDesktop;
+        line-height: $titleLineHeightDesktop/$titleSizeDesktop;
         width: 480px;
         transform: skewY(-16deg);
         text-align: center;
     }
+
+    @media (max-width: 700px) {
+        h1 {
+            font-size: $titleSizeMobile;
+            line-height: $titleLineHeightMobile/$titleSizeMobile;
+            width: 360px;
+        }
+    }
 }
+
+
 
 .redStyleTitle {
     color: #fba4b2;
