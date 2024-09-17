@@ -48,7 +48,7 @@ const SidebarComponent = (colourClassName) => {
             {showSidebar ?
                 <div className="sidebarContainer">
                     <ul>
-                        <li>HOME</li>
+                        <li className="currentPage">HOME</li>
                         <li className="navSpacing">GALLERY</li>
                         <li className="navSpacing">ABOUT</li>
                     </ul>

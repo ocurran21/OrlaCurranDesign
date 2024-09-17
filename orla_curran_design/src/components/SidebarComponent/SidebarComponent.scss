@@ -40,29 +40,53 @@ button {
 .redStyle {
     color: #e13232;
     background-color: #fba4b2;
+
+    .currentPage {
+        color: #ffffff;
+    }
 }
 
 .tealStyle {
     color: #0d4647;
     background-color: #faf5d8;
+
+    .currentPage {
+        color: #70d0bd
+    }
 }
 
 .purpleStyle {
     color: #956fc7;
     background-color: #fbcea4;
+
+    .currentPage {
+        color: #592693;
+    }
 }
 
 .blueStyle {
     color: #101e6d;
     background-color: #d590f5;
+
+    .currentPage {
+        color: #ffffff;
+    }
 }
 
 .greenStyle {
     color: #4a8d3f;
     background-color: #a0f4e3;
+
+    .currentPage {
+        color: #17a4f6;
+    }
 }
 
 .orangeStyle {
     color: #e9873b;
     background-color: #faebc3;
+
+    .currentPage {
+        color: #eec326;
+    }
 }
