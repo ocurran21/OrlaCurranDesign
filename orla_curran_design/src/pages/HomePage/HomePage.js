@@ -25,7 +25,7 @@ const getRandomColours = () => {
     return colourList[randomIndex];
 }
 
-const dynamicClassName = (currentColours) => {
+export const dynamicClassName = (currentColours) => {
     switch (currentColours) {
         case redHomePageColour:
             return "redStyle";

@@ -1,14 +1,43 @@
 import { render, screen } from '@testing-library/react';
-import HomePage from "./HomePage";
+import { act } from 'react';
 
-test('renders the home page', () => {
-    render(<HomePage />);
-    const element = screen.getByText(/ORLA CURRAN DESIGN/i);
-    expect(element).toBeInTheDocument();
-});
+import HomePage, {dynamicClassName} from "./HomePage";
 
-test('background colour on refresh is different from previous background colour', () => {
-    render(<HomePage />);
-    const element = screen.getByText(/ORLA CURRAN DESIGN/i);
-    expect(element).toBeInTheDocument();
-});
+describe('HomePageComponent', () => {
+    test('should render the home page and title is displayed', async () => {
+        await act(async () => {
+            render(<HomePage/>);
+        });
+
+        const element = await screen.findByText(/ORLA CURRAN DESIGN/i);
+        expect(element).toBeInTheDocument();
+    });
+})
+
+describe('getRandomColours()', () => {
+    test('should return a value from colourList', async () => {
+
+    });
+})
+
+describe('dynamicClassName()', () => {
+    test('when currentColours is null should return defaultStyle', () => {
+        const result = dynamicClassName();
+        expect(result).toBe("defaultStyle");
+    });
+
+    test('when currentColours is not "#ffffff" should return defaultStyle', () => {
+        const result = dynamicClassName('#ffffff');
+        expect(result).toBe("defaultStyle");
+    });
+
+    test('when currentColours is "#e13232" should return redStyle', () => {
+        const result = dynamicClassName('#e13232');
+        expect(result).toBe("redStyle");
+    });
+
+    test('when currentColours is "#0d4647" should return tealStyle', () => {
+        const result = dynamicClassName('#0d4647');
+        expect(result).toBe("tealStyle");
+    });
+})
