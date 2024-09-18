@@ -5,8 +5,8 @@ on:
     branches:
       - develop
 
-env:
-  CI: false
+#env:
+#  CI: false
 
 jobs:
   build:
@@ -29,4 +29,8 @@ jobs:
 
       - name: Run build
         run: npm run build
+        working-directory: ./orla_curran_design
+
+      - name: Run tests
+        run: npm test
         working-directory: ./orla_curran_design
