@@ -1,3 +1,38 @@
+p {
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 24px;
+  height: 40px;
+  margin-left: 32px;
+  margin-bottom: 0;
+}
+
 .galleryContainer {
   background-color: #ffffff;
 }
+
+.topHeader {
+  margin-top: 92px;
+}
+
+.galleryGrid {
+  margin: 0 32px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  //grid-auto-rows: minmax(160px, auto);
+  gap: 16px;
+}
+
+.galleryGrid img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.wide {
+  grid-column: span 2;
+}
+
+.tall {
+  grid-row: span 2;
+}
+
