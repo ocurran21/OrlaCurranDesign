@@ -2,22 +2,16 @@ import PageTitleComponent from "../../components/PageTitleComponent/PageTitleCom
 import "./HomePage.scss"
 import SidebarComponent from "../../components/SidebarComponent/SidebarComponent";
 import React, {useState, useEffect} from "react";
-
-const redHomePageColour = '#e13232';
-const tealHomePageColour = '#0d4647';
-const purpleHomePageColour = '#956fc7';
-const blueHomePageColour = '#101e6d';
-const greenHomePageColour = '#4a8d3f';
-const orangeHomePageColour = '#e9873b';
+import {COLOURS} from "../../constants/colours";
 
 const getRandomColours = () => {
     const colourList = [
-        redHomePageColour,
-        tealHomePageColour,
-        purpleHomePageColour,
-        blueHomePageColour,
-        greenHomePageColour,
-        orangeHomePageColour
+        COLOURS.redStyle,
+        COLOURS.tealStyle,
+        COLOURS.purpleStyle,
+        COLOURS.blueStyle,
+        COLOURS.greenStyle,
+        COLOURS.orangeStyle
     ];
 
     const randomIndex = Math.floor(Math.random() * colourList.length);
@@ -26,22 +20,7 @@ const getRandomColours = () => {
 }
 
 export const dynamicClassName = (currentColours) => {
-    switch (currentColours) {
-        case redHomePageColour:
-            return "redStyle";
-        case tealHomePageColour:
-            return "tealStyle";
-        case purpleHomePageColour:
-            return "purpleStyle";
-        case blueHomePageColour:
-            return "blueStyle";
-        case greenHomePageColour:
-            return "greenStyle";
-        case orangeHomePageColour:
-            return "orangeStyle";
-        default:
-            return "defaultStyle";
-    }
+    return currentColours ? currentColours.className : COLOURS.defaultStyle.className;
 }
 
 const HomePage = () => {
@@ -52,7 +31,7 @@ const HomePage = () => {
     useEffect(() => {
         currentColours = getRandomColours();
         setColourClassName(dynamicClassName(currentColours));
-        document.getElementsByClassName('homeContainer')[0].style.backgroundColor = currentColours;
+        document.getElementsByClassName('homeContainer')[0].style.backgroundColor = currentColours.primary;
     }, []);
 
     return (
