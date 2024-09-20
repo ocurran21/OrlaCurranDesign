@@ -64,6 +64,10 @@ button {
     }
 }
 
+.scrollableSidebar {
+    overflow: scroll;
+}
+
 .openSidebarButton {
     left: 32px;
 }
@@ -123,7 +127,6 @@ button {
 }
 
 .defaultSidebar {
-    width: 480px;
     color: #2d353b;
     background-color: #6f777c;
 

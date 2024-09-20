@@ -11,12 +11,17 @@ p {
   margin-bottom: 0;
 }
 
-.galleryContainer {
-  background-color: #ffffff;
-}
-
 .topHeader {
   margin-top: 92px;
+}
+
+.galleryContainer {
+  display: flex;
+}
+
+.displayGallery {
+  display: flex;
+  flex-direction: column;
 }
 
 .galleryGrid {

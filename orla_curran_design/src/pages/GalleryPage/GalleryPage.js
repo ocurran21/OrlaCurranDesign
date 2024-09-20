@@ -21,9 +21,9 @@ import cavtatWatercolour from "../../resources/images/art/watercolour/cavtat.png
 
 const GalleryPage = () => {
     return (
-            <div>
-                <SidebarComponent/>
-                <div className="galleryContainer">
+            <div className="galleryContainer">
+                <SidebarComponent className="scrollableSidebar"/>
+                <div className="displayGallery">
                     <p className="topHeader">Still Life</p>
                     <section className="galleryGrid">
                         <img src={strawberryDrawing} alt="Coloured Pencil Sketch of a Strawberry"

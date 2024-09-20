@@ -1,8 +1,9 @@
 import SidebarComponent from "../../components/SidebarComponent/SidebarComponent";
+import "./AboutPage.scss"
 
 const AboutPage = () => {
     return (
-        <div>
+        <div className="aboutContainer">
             <SidebarComponent/>
         </div>
     );
