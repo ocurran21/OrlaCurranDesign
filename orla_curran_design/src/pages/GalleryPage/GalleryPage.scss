@@ -1,8 +1,3 @@
-body {
-  height: auto;
-  overflow: auto;
-}
-
 p {
   font-family: "Libre Franklin", sans-serif;
   font-size: 24px;
@@ -17,6 +12,7 @@ p {
 
 .galleryContainer {
   display: flex;
+  overflow: scroll;
 }
 
 .displayGallery {
