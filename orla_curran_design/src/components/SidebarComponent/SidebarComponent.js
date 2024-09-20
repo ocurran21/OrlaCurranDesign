@@ -71,7 +71,8 @@ const SidebarComponent = (colourClassName) => {
     }
 
     return (
-        <div className={colourClassName.colourClassName ? colourClassName.colourClassName : "defaultSidebar"}>
+        <div className={`${colourClassName.colourClassName ? colourClassName.colourClassName : "defaultSidebar"} 
+        ${showSidebar ? "sidebarOpen" : ""}`}>
             {showSidebar ?
                 <div className="sidebarContainer">
                     <nav>
