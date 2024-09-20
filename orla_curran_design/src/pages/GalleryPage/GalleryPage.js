@@ -16,9 +16,6 @@ import owenProfile from "../../resources/images/art/portraiture/owenOrange.png"
 
 import blueSquirrel from "../../resources/images/art/animals/blueSquirrel.png"
 
-import stemWatercolour from "../../resources/images/art/watercolour/watercolourStems.jpg"
-import cavtatWatercolour from "../../resources/images/art/watercolour/cavtat.png"
-
 const GalleryPage = () => {
     return (
             <div className="galleryContainer">
@@ -30,7 +27,7 @@ const GalleryPage = () => {
                              className="wide"></img>
                         <img src={limeDrawing} alt="Coloured Pencil Sketch of a Lime"></img>
                         <img src={pepperDrawing} alt="Coloured Pencil Sketch of a Red Pepper"></img>
-                        <img src={pomegranateDrawing} alt="Coloured Pencil Sketch of a Pomegranate"></img>
+                        <img src={pomegranateDrawing} alt="Coloured Pencil Sketch of a Pomegranate" className="tall wide"></img>
                         <img src={dragonTreeDrawing} alt="Coloured Pencil Sketch of a potted Dragin Tree"
                              className="tall"></img>
                     </section>
@@ -43,18 +40,18 @@ const GalleryPage = () => {
                     </section>
                     <p>Portraiture</p>
                     <section className="galleryGrid">
-                        <img src={owenProfile} alt="Orange pencil sketch of a man's side profile"></img>
+                        <img src={owenProfile} alt="Orange pencil sketch of a man's side profile" className="tall wide"></img>
                     </section>
                     <p>Animals</p>
                     <section className="galleryGrid">
-                        <img src={blueSquirrel} alt="Blue pencil drawing of a squirrel"></img>
+                        <img src={blueSquirrel} alt="Blue pencil drawing of a squirrel" className="wide"></img>
                     </section>
-                    <p>Watercolours</p>
-                    <section className="galleryGrid">
-                        <img src={stemWatercolour} alt="Stylised watercolour of green stems"></img>
-                        <img src={cavtatWatercolour} alt="Stylised watercolour of a Kayak in Croatia"></img>
-                    </section>
-                    <p>Oils</p>
+                    {/*<p>Watercolours</p>*/}
+                    {/*<section className="galleryGrid">*/}
+                    {/*    <img src={stemWatercolour} alt="Stylised watercolour of green stems"></img>*/}
+                    {/*    <img src={cavtatWatercolour} alt="Stylised watercolour of a Kayak in Croatia"></img>*/}
+                    {/*</section>*/}
+                    {/*<p>Oils</p>*/}
                 </div>
             </div>
     );
