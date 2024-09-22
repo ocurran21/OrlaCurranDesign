@@ -16,8 +16,20 @@ import pencilSketchNude from "../../resources/images/art/lifeDrawing/lifeDrawing
 import owenProfile from "../../resources/images/art/portraiture/owenOrange.png"
 
 import blueSquirrel from "../../resources/images/art/animals/blueSquirrel.png"
+import DetailViewComponent from "../../components/DetailViewComponent/DetailViewComponent";
+import {useState} from "react";
 
 const GalleryPage = () => {
+    const [showDetailView, setShowDetailView] = useState(false);
+
+    const closeDetailView = () => {
+        setShowDetailView(false);
+    }
+
+    const openDetailView = () => {
+        setShowDetailView(true);
+    }
+
     return (
             <div className="galleryContainer">
                 <SidebarComponent className="scrollableSidebar"/>
@@ -25,7 +37,7 @@ const GalleryPage = () => {
                     <p className="topHeader">Still Life</p>
                     <section className="galleryGrid">
                         <img src={strawberryDrawing} alt="Coloured Pencil Sketch of a Strawberry"
-                             className="wide"></img>
+                             className="wide" onClick={() => openDetailView()}></img>
                         <img src={limeDrawing} alt="Coloured Pencil Sketch of a Lime"></img>
                         <img src={pepperDrawing} alt="Coloured Pencil Sketch of a Red Pepper"></img>
                         <img src={pomegranateDrawing} alt="Coloured Pencil Sketch of a Pomegranate" className="tall wide"></img>
@@ -54,6 +66,9 @@ const GalleryPage = () => {
                     {/*    <img src={cavtatWatercolour} alt="Stylised watercolour of a Kayak in Croatia"></img>*/}
                     {/*</section>*/}
                     {/*<p>Oils</p>*/}
+                    {showDetailView ?
+                        <DetailViewComponent/> : ""
+                    }
                 </div>
             </div>
     );
