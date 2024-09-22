@@ -1,11 +1,12 @@
 import "./GalleryPage.scss"
 import SidebarComponent from "../../components/SidebarComponent/SidebarComponent";
 
-import strawberryDrawing from "../../resources/images/art/stillLifes/strawyberry.png"
-import limeDrawing from "../../resources/images/art/stillLifes/lime.png"
-import pepperDrawing from "../../resources/images/art/stillLifes/pepper.png"
-import pomegranateDrawing from "../../resources/images/art/stillLifes/pomegranate.png"
-import dragonTreeDrawing from "../../resources/images/art/stillLifes/dragonTree.png"
+import strawberryDrawing from "../../resources/images/art/stillLife/strawyberry.png"
+import limeDrawing from "../../resources/images/art/stillLife/lime.png"
+import pepperDrawing from "../../resources/images/art/stillLife/pepper.png"
+import pomegranateDrawing from "../../resources/images/art/stillLife/pomegranate.png"
+import dragonTreeDrawing from "../../resources/images/art/stillLife/dragonTree.png"
+import plumDrawing from "../../resources/images/art/stillLife/plum.png"
 
 import blueNude from "../../resources/images/art/lifeDrawing/blueLifeDrawing.png"
 import goldNude from "../../resources/images/art/lifeDrawing/goldenLifeDrawing.png"
@@ -28,8 +29,9 @@ const GalleryPage = () => {
                         <img src={limeDrawing} alt="Coloured Pencil Sketch of a Lime"></img>
                         <img src={pepperDrawing} alt="Coloured Pencil Sketch of a Red Pepper"></img>
                         <img src={pomegranateDrawing} alt="Coloured Pencil Sketch of a Pomegranate" className="tall wide"></img>
-                        <img src={dragonTreeDrawing} alt="Coloured Pencil Sketch of a potted Dragin Tree"
+                        <img src={dragonTreeDrawing} alt="Coloured Pencil Sketch of a potted Dragon Tree"
                              className="tall"></img>
+                        <img src={plumDrawing} alt="Coloured Pencil Sketch of a potted a Plum" className="tall"/>
                     </section>
                     <p>Life Drawing</p>
                     <section className="galleryGrid">
