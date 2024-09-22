@@ -22,10 +22,6 @@ import {useState} from "react";
 const GalleryPage = () => {
     const [showDetailView, setShowDetailView] = useState(false);
 
-    const closeDetailView = () => {
-        setShowDetailView(false);
-    }
-
     const openDetailView = () => {
         setShowDetailView(true);
     }
@@ -43,7 +39,8 @@ const GalleryPage = () => {
                         <img src={pomegranateDrawing} alt="Coloured Pencil Sketch of a Pomegranate" className="tall wide"></img>
                         <img src={dragonTreeDrawing} alt="Coloured Pencil Sketch of a potted Dragon Tree"
                              className="tall"></img>
-                        <img src={plumDrawing} alt="Coloured Pencil Sketch of a potted a Plum" className="tall"/>
+                        <img src={plumDrawing} alt="Coloured Pencil Sketch of a potted a Plum" className="tall"
+                             onClick={() => openDetailView()}/>
                     </section>
                     <p>Life Drawing</p>
                     <section className="galleryGrid">

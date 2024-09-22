@@ -1,11 +1,21 @@
 import "./DetailViewComponent.scss";
-import strawberryDrawing from "../../resources/images/art/stillLife/strawyberry.png";
+import plumDrawing from "../../resources/images/art/stillLife/plum.png"
+import {useState} from "react";
 
-const DetailViewComponent = (image) => {
+const DetailViewComponent = () => {
+    const [showDetailView, setShowDetailView] = useState(true);
+
+    const closeDetailView = () => {
+        setShowDetailView(false);
+    }
+
+    if (!showDetailView) return null;
+
     return (
-        <div className="detailView">
-            <img src={strawberryDrawing} alt="Coloured Pencil Sketch of a Strawberry" className="fullSizeImage"/>
-        </div>
+            <div className="detailView">
+                <button onClick={closeDetailView}>Close</button>
+                <img src={plumDrawing} alt="Coloured Pencil Sketch of a Plum" className="fullSizeImage"/>
+            </div>
     );
 };
 
