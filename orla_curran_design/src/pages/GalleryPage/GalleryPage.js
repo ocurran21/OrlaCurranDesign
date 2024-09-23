@@ -26,6 +26,10 @@ const GalleryPage = () => {
         setShowDetailView(true);
     }
 
+    const closeDetailView = () => {
+        setShowDetailView(false);
+    }
+
     return (
             <div className="galleryContainer">
                 <SidebarComponent className="scrollableSidebar"/>
@@ -64,7 +68,11 @@ const GalleryPage = () => {
                     {/*</section>*/}
                     {/*<p>Oils</p>*/}
                     {showDetailView ?
-                        <DetailViewComponent/> : ""
+                        <div>
+                            <DetailViewComponent/>
+                            <button onClick={closeDetailView}>Close</button>
+                        </div>
+                        : ""
                     }
                 </div>
             </div>
