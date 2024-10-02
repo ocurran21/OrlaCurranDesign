@@ -16,6 +16,8 @@ import pencilSketchNude from "../../resources/images/art/lifeDrawing/lifeDrawing
 import owenProfile from "../../resources/images/art/portraiture/owenOrange.png"
 
 import blueSquirrel from "../../resources/images/art/animals/blueSquirrel.png"
+import tanithProfile from "../../resources/images/art/animals/tanithProfile.png"
+
 import DetailViewComponent from "../../components/DetailViewComponent/DetailViewComponent";
 import {useState} from "react";
 
@@ -60,6 +62,7 @@ const GalleryPage = () => {
                     <p>Animals</p>
                     <section className="galleryGrid">
                         <img src={blueSquirrel} alt="Blue pencil drawing of a squirrel" className="wide"></img>
+                        <img src={tanithProfile} alt="Pencil drawing of a Siamese cat" className="tall"></img>
                     </section>
                     {/*<p>Watercolours</p>*/}
                     {/*<section className="galleryGrid">*/}

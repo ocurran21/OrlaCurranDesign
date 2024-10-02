@@ -12,7 +12,8 @@ p {
 
 .galleryContainer {
   display: flex;
-  overflow: scroll;
+  height: 100vh;
+  background-color: #f9f8f7;
 }
 
 .displayGallery {
