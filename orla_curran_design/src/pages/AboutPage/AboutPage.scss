@@ -1,32 +1,47 @@
 .aboutContainer {
   display: flex;
-  height: 100vh;
   background-color: #f9f8f7;
 }
 
 .aboutContent {
   display: flex;
   flex-direction: column;
+  margin-bottom: 92px;
+
   h2 {
     font-family: "Dela Gothic One", sans-serif;
     font-size: 96px;
     color: #393232;
-    margin: 64px 32px 32px 32px;
+    margin: 80px 32px 32px 32px;
   }
 
   h3 {
     font-family: "Libre Franklin", sans-serif;
     font-size: 40px;
     color: #6f777c;
-    margin: 0 32px;
+    margin: 0 32px 32px;
   }
 
   p {
     font-family: "Libre Franklin", sans-serif;
     font-size: 24px;
     color: #6f777c;
-    width: 100vw;
-    margin: 16px 32px;
+    margin: 16px 32px 32px 32px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    height: unset;
+  }
+}
+
+@media (max-width: 1000px) {
+  .aboutContent {
+    h2 {
+      font-size: 64px;
+    }
+
+    h3 {
+      font-size: 32px;
+    }
   }
 }
 

@@ -21,6 +21,9 @@ import tanithPortrait from "../../resources/images/art/animals/tanithPortrait.pn
 import bobPortrait from "../../resources/images/art/animals/bobPortrait.png"
 import jasperPortrait from "../../resources/images/art/animals/jasperPortrait.png"
 
+// import stemWatercolour from "../../resources/images/art/watercolour/watercolourStems.png"
+// import cavtatWatercolour from "../../resources/images/art/watercolour/cavtatWatercolour.png"
+
 import DetailViewComponent from "../../components/DetailViewComponent/DetailViewComponent";
 import {useState} from "react";
 
@@ -37,7 +40,7 @@ const GalleryPage = () => {
 
     return (
             <div className="galleryContainer">
-                <SidebarComponent className="scrollableSidebar"/>
+                <SidebarComponent/>
                 <div className="displayGallery">
                     <p className="topHeader">Still Life</p>
                     <section className="galleryGrid">
@@ -51,17 +54,18 @@ const GalleryPage = () => {
                         <img src={plumDrawing} alt="Coloured Pencil Sketch of a potted a Plum" className="tall"
                              onClick={() => openDetailView()}/>
                     </section>
-                    <p>Life Drawing</p>
+                    <p>Portraiture & Life Drawing</p>
                     <section className="galleryGrid">
+                        <img src={owenProfile} alt="Orange pencil sketch of a man's side profile" className="tall wide"></img>
                         <img src={blueNude} alt="Blue life drawing of a man" className="tall"></img>
                         <img src={goldNude} alt="Gold life drawing of a woman" className="wide"></img>
                         <img src={greenNude} alt="Green life drawing of a woman" className="tall"></img>
                         <img src={pencilSketchNude} alt="Pencil Sketch life drwaing of a woman"></img>
                     </section>
-                    <p>Portraiture</p>
-                    <section className="galleryGrid">
-                        <img src={owenProfile} alt="Orange pencil sketch of a man's side profile" className="tall wide"></img>
-                    </section>
+                    {/*<p>Portraiture</p>*/}
+                    {/*<section className="galleryGrid">*/}
+                    {/*    <img src={owenProfile} alt="Orange pencil sketch of a man's side profile" className="tall wide"></img>*/}
+                    {/*</section>*/}
                     <p>Animals</p>
                     <section className="galleryGrid">
                         <img src={blueSquirrel} alt="Blue pencil drawing of a squirrel" className="wide"></img>
@@ -72,8 +76,8 @@ const GalleryPage = () => {
                     </section>
                     {/*<p>Watercolours</p>*/}
                     {/*<section className="galleryGrid">*/}
-                    {/*    <img src={stemWatercolour} alt="Stylised watercolour of green stems"></img>*/}
-                    {/*    <img src={cavtatWatercolour} alt="Stylised watercolour of a Kayak in Croatia"></img>*/}
+                    {/*    <img src={stemWatercolour} alt="Stylised watercolour of green stems" className="wide tall"></img>*/}
+                    {/*    <img src={cavtatWatercolour} alt="Stylised watercolour of a Kayak in Croatia" className="wide"></img>*/}
                     {/*</section>*/}
                     {/*<p>Oils</p>*/}
                     {showDetailView ?
