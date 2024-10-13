@@ -19,6 +19,7 @@ import blueSquirrel from "../../resources/images/art/animals/blueSquirrel.png"
 import tanithProfile from "../../resources/images/art/animals/tanithProfile.png"
 import tanithPortrait from "../../resources/images/art/animals/tanithPortrait.png"
 import bobPortrait from "../../resources/images/art/animals/bobPortrait.png"
+import jasperPortrait from "../../resources/images/art/animals/jasperPortrait.png"
 
 import DetailViewComponent from "../../components/DetailViewComponent/DetailViewComponent";
 import {useState} from "react";
@@ -67,6 +68,7 @@ const GalleryPage = () => {
                         <img src={tanithProfile} alt="Pencil drawing of a Siamese cat" className="tall"></img>
                         <img src={tanithPortrait} alt="Pencil drawing of a Siamese cat" className="wide"></img>
                         <img src={bobPortrait} alt="Pencil drawing of Bob" className="wide tall"></img>
+                        <img src={jasperPortrait} alt="Pencil drawing of a white cat with giiner patches"></img>
                     </section>
                     {/*<p>Watercolours</p>*/}
                     {/*<section className="galleryGrid">*/}
