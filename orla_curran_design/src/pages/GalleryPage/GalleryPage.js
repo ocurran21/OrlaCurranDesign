@@ -84,10 +84,11 @@ const GalleryPage = () => {
                     {/*    <img src={cavtatWatercolour} alt="Stylised watercolour of a Kayak in Croatia" className="wide"></img>*/}
                     {/*</section>*/}
                     {/*<p>Oils</p>*/}
-                    <section>
-                        <img src={killywoolFoyleView} alt="Oil painting of the view of the Foyle"></img>
-                        <img src={churchPoint} alt="Oil painting of the view of Castleward Bay at sunset"></img>
-                        <img src={caledonianMacBrayne} alt="Oil painting of the Ferry in Ullapool"></img>
+                    <p>Landscapes</p>
+                    <section className="galleryGrid">
+                        <img src={killywoolFoyleView} alt="Oil painting of the view of the Foyle" className="wide"></img>
+                        <img src={churchPoint} alt="Oil painting of the view of Castleward Bay at sunset" className="wide tall"></img>
+                        <img src={caledonianMacBrayne} alt="Oil painting of the Ferry in Ullapool" className="wide"></img>
                     </section>
                     {showDetailView ?
                         <div>
