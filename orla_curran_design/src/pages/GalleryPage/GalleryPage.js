@@ -24,6 +24,10 @@ import jasperPortrait from "../../resources/images/art/animals/jasperPortrait.pn
 // import stemWatercolour from "../../resources/images/art/watercolour/watercolourStems.png"
 // import cavtatWatercolour from "../../resources/images/art/watercolour/cavtatWatercolour.png"
 
+import killywoolFoyleView from "../../resources/images/art/landscapes/killywoolFoyleView.png"
+import churchPoint from "../../resources/images/art/landscapes/churchPoint.png"
+import caledonianMacBrayne from "../../resources/images/art/landscapes/caledonianMacBrayne.png"
+
 import DetailViewComponent from "../../components/DetailViewComponent/DetailViewComponent";
 import {useState} from "react";
 
@@ -80,6 +84,11 @@ const GalleryPage = () => {
                     {/*    <img src={cavtatWatercolour} alt="Stylised watercolour of a Kayak in Croatia" className="wide"></img>*/}
                     {/*</section>*/}
                     {/*<p>Oils</p>*/}
+                    <section>
+                        <img src={killywoolFoyleView} alt="Oil painting of the view of the Foyle"></img>
+                        <img src={churchPoint} alt="Oil painting of the view of Castleward Bay at sunset"></img>
+                        <img src={caledonianMacBrayne} alt="Oil painting of the Ferry in Ullapool"></img>
+                    </section>
                     {showDetailView ?
                         <div>
                             <DetailViewComponent/>
