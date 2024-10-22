@@ -3,6 +3,7 @@ import "./HomePage.scss"
 import SidebarComponent from "../../components/SidebarComponent/SidebarComponent";
 import React, {useState, useEffect} from "react";
 import {COLOURS} from "../../constants/colours";
+import FooterComponent from "../../components/FooterComponent/FooterComponent";
 
 const getRandomColours = () => {
     const colourList = [
@@ -31,14 +32,20 @@ const HomePage = () => {
     useEffect(() => {
         currentColours = getRandomColours();
         setColourClassName(dynamicClassName(currentColours));
-        document.getElementsByClassName('homeContainer')[0].style.backgroundColor = currentColours.primary;
+        document.getElementsByClassName('homePage')[0].style.backgroundColor = currentColours.primary;
+        document.getElementsByClassName('footerText')[0].style.color = currentColours.secondary;
     }, []);
 
     return (
-        <header className="homeContainer">
-            <SidebarComponent colourClassName={colourClassName}/>
-            <PageTitleComponent colourClassName={titleClassName}/>
-        </header>
+        <div className="homePage">
+            <header className="homeContainer">
+                <SidebarComponent colourClassName={colourClassName}/>
+                <div className="homeContent">
+                    <PageTitleComponent colourClassName={titleClassName}/>
+                    <FooterComponent/>
+                </div>
+            </header>
+        </div>
     );
 };
 
