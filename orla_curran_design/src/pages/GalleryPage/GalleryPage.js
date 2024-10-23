@@ -21,12 +21,12 @@ import tanithPortrait from "../../resources/images/art/animals/tanithPortrait.pn
 import bobPortrait from "../../resources/images/art/animals/bobPortrait.png"
 import jasperPortrait from "../../resources/images/art/animals/jasperPortrait.png"
 
-// import stemWatercolour from "../../resources/images/art/watercolour/watercolourStems.png"
-// import cavtatWatercolour from "../../resources/images/art/watercolour/cavtatWatercolour.png"
-
-import killywoolFoyleView from "../../resources/images/art/landscapes/killywoolFoyleView.png"
-import churchPoint from "../../resources/images/art/landscapes/churchPoint.png"
-import caledonianMacBrayne from "../../resources/images/art/landscapes/caledonianMacBrayne.png"
+import stemWatercolour from "../../resources/images/art/watercolour/watercolourStems.png"
+import cavtatWatercolour from "../../resources/images/art/watercolour/cavtatWatercolour.png"
+import killywoolFoyleView from "../../resources/images/art/paintings/killywoolFoyleView.png"
+import churchPoint from "../../resources/images/art/paintings/churchPoint.png"
+import caledonianMacBrayne from "../../resources/images/art/paintings/caledonianMacBrayne.png"
+import honeyPortrait from "../../resources/images/art/paintings/honeyPortrait.png"
 
 import DetailViewComponent from "../../components/DetailViewComponent/DetailViewComponent";
 import {useState} from "react";
@@ -68,10 +68,6 @@ const GalleryPage = () => {
                             <img src={greenNude} alt="Green life drawing of a woman" className="tall"></img>
                             <img src={pencilSketchNude} alt="Pencil Sketch life drwaing of a woman"></img>
                         </section>
-                        {/*<p>Portraiture</p>*/}
-                        {/*<section className="galleryGrid">*/}
-                        {/*    <img src={owenProfile} alt="Orange pencil sketch of a man's side profile" className="tall wide"></img>*/}
-                        {/*</section>*/}
                         <p>Animals</p>
                         <section className="galleryGrid">
                             <img src={blueSquirrel} alt="Blue pencil drawing of a squirrel" className="wide"></img>
@@ -86,11 +82,14 @@ const GalleryPage = () => {
                         {/*    <img src={cavtatWatercolour} alt="Stylised watercolour of a Kayak in Croatia" className="wide"></img>*/}
                         {/*</section>*/}
                         {/*<p>Oils</p>*/}
-                        <p>Landscapes</p>
+                        <p>Paintings</p>
                         <section className="galleryGrid">
                             <img src={killywoolFoyleView} alt="Oil painting of the view of the Foyle" className="wide"></img>
                             <img src={churchPoint} alt="Oil painting of the view of Castleward Bay at sunset" className="wide tall"></img>
                             <img src={caledonianMacBrayne} alt="Oil painting of the Ferry in Ullapool" className="wide"></img>
+                            <img src={honeyPortrait} alt="Oil painting of a dog on the beach" className="wide"></img>
+                            <img src={cavtatWatercolour} alt="Stylised watercolour of a Kayak in Croatia"></img>
+                            <img src={stemWatercolour} alt="Stylised watercolour of green stems"></img>
                         </section>
                         <FooterComponent/>
                         {showDetailView ?
