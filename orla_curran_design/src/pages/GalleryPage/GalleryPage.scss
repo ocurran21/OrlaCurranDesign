@@ -17,6 +17,7 @@
 .displayGallery {
   display: flex;
   flex-direction: column;
+  width: 100vw;
 }
 
 .galleryGrid {
@@ -33,6 +34,12 @@
 
   .tall {
     grid-row: span 2;
+  }
+}
+
+@media (min-width: 1500px) {
+  .galleryGrid {
+    grid-auto-rows: 300px;
   }
 }
 
@@ -83,5 +90,11 @@
         margin: 8px 32px;
     }
   }
+}
+
+.closeButton {
+  position: fixed;
+  top: 32px;
+  right: 32px;
 }
 

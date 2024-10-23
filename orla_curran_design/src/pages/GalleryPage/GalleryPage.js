@@ -5,6 +5,8 @@ import FooterComponent from "../../components/FooterComponent/FooterComponent";
 import sections from "../../constants/images";
 import {useState} from "react";
 
+import closeButton from "../../resources/images/buttonImages/close.png"
+
 const GalleryPage = () => {
   const [showDetailView, setShowDetailView] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
@@ -42,8 +44,8 @@ const GalleryPage = () => {
           ))}
           {showDetailView && selectedImage && (
             <div>
-              <DetailViewComponent image={selectedImage} />
-              <button onClick={closeDetailView}>Close</button>
+              <DetailViewComponent image={selectedImage}/>
+              <button onClick={closeDetailView} className="closeButton"><img src={closeButton}/></button>
             </div>
           )}
           <FooterComponent />
