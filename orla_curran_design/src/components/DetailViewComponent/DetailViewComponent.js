@@ -5,7 +5,7 @@ import previousButton from "../../resources/images/buttonImages/navigatePrevious
 import nextButton from "../../resources/images/buttonImages/navigateNext.png"
 
 const DetailViewComponent = ({ image }) => {
-    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const [currentImageIndex, setCurrentImageIndex] = useState(image.id);
     let currentImage;
     let totalNumberOfImages = sections.reduce((acc, section) => acc + section.images.length, 0);
 
