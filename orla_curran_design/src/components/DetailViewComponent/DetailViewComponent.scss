@@ -16,3 +16,21 @@
     max-height: 100vh;
     object-fit: contain;
 }
+
+@media (min-width: 1500px) {
+    .detailImage {
+        max-height: 70vh;
+    }
+}
+
+.previousButton {
+    position: fixed;
+    top: calc(50vh - 92px);
+    left: 32px;
+}
+
+.nextButton {
+    position: fixed;
+    top: calc(50vh - 92px);
+    right: 64px;
+}
