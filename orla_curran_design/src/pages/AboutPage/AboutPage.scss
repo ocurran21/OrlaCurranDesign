@@ -6,7 +6,7 @@
 .aboutContent {
   display: flex;
   flex-direction: column;
-  margin-bottom: 92px;
+  width: 100vw;
 
   h2 {
     font-family: "Dela Gothic One", sans-serif;
@@ -44,5 +44,24 @@
     }
   }
 }
+
+@media (max-height: 1500px) {
+  .footerContainer {
+    margin-top: 500px;
+  }
+}
+
+@media (max-height: 1200px) {
+  .footerContainer {
+    margin-top: 200px;
+  }
+}
+
+@media (max-height: 900px) {
+  .footerContainer {
+    margin-top: 92px;
+  }
+}
+
 
 

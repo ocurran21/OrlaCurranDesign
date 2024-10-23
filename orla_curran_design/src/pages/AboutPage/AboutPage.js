@@ -1,3 +1,4 @@
+import FooterComponent from "../../components/FooterComponent/FooterComponent";
 import SidebarComponent from "../../components/SidebarComponent/SidebarComponent";
 import "./AboutPage.scss"
 
@@ -15,6 +16,7 @@ const AboutPage = () => {
                 <p>For my art I mostly use colouring pencils but also love watercolours and markers.</p>
                 <p>I am passionate about combining my love of art and design with technology.</p>
                 <p>Currently, I'm focused on creating websites that highlight this unique combination.</p>
+                <FooterComponent/>
             </div>
         </div>
     );
