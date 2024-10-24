@@ -10,6 +10,7 @@ import blueNude from "../resources/images/art/lifeDrawing/blueLifeDrawing.png"
 import goldNude from "../resources/images/art/lifeDrawing/goldenLifeDrawing.png"
 import greenNude from "../resources/images/art/lifeDrawing/greenLifeDrawing.png"
 import pencilSketchNude from "../resources/images/art/lifeDrawing/lifeDrawingPencil.png"
+import selfPortrait from "../resources/images/art/portraiture/selfPortrait.png"
 
 import blueSquirrel from "../resources/images/art/animals/blueSquirrel.png"
 import tanithProfile from "../resources/images/art/animals/tanithProfile.png"
@@ -43,7 +44,8 @@ const sections = [
             { id: 7, src: blueNude, title: "blueNude", alt: "Blue life drawing of a man", styles: "tall" },
             { id: 8, src: goldNude, title: "goldNude", alt: "Gold life drawing of a man", styles: "wide" },
             { id: 9, src: greenNude, title: "greenNude", alt: "Green life drawing of a woman", styles: "tall" },
-            { id: 10, src: pencilSketchNude, title: "pencilSketchNude", alt: "Pencil Sketch life drawing of a woman" }
+            { id: 10, src: pencilSketchNude, title: "pencilSketchNude", alt: "Pencil Sketch life drawing of a woman" },
+            { id: 11, src: selfPortrait, title: "selfPortrait", alt: "Rough sketch self portrait in red"}
         ]
     },
     {
