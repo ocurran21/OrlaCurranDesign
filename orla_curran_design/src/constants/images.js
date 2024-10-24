@@ -23,7 +23,7 @@ import churchPoint from "../resources/images/art/paintings/churchPoint.png"
 import caledonianMacBrayne from "../resources/images/art/paintings/caledonianMacBrayne.png"
 import honeyPortrait from "../resources/images/art/paintings/honeyPortrait.png"
 import stemWatercolour from "../resources/images/art/watercolour/watercolourStems.png"
-import cavtatWatercolour from "../resources/images/art/watercolour/cavtatWatercolour.png"
+import gluggleJug from "../resources/images/art/paintings/gluggleJug.png"
 
 const sections = [
     {
@@ -51,22 +51,22 @@ const sections = [
     {
         header: "Animal Sketches",
         images: [
-            { id: 11, src: blueSquirrel, title: "blueSquirrel", alt: "Blue pencil drawing of a squirrel", styles: "wide" },
-            { id: 12, src: tanithProfile, title: "tanithProfile", alt: "Pencil drawing of a Siamese cat", styles: "tall" },
-            { id: 13, src: tanithPortrait, title: "tanithPortrait", alt: "Pencil drawing of a Siamese cat", styles: "wide" },
-            { id: 14, src: bobPortrait, title: "bobPortrait", alt: "Pencil drawing of a ginger cat", styles: "tall wide" },
-            { id: 15, src: jasperPortrait, title: "jasperPortrait", alt: "Pencil drawing of a white cat with ginger patches" }
+            { id: 12, src: blueSquirrel, title: "blueSquirrel", alt: "Blue pencil drawing of a squirrel", styles: "wide" },
+            { id: 13, src: tanithProfile, title: "tanithProfile", alt: "Pencil drawing of a Siamese cat", styles: "tall" },
+            { id: 14, src: tanithPortrait, title: "tanithPortrait", alt: "Pencil drawing of a Siamese cat", styles: "wide" },
+            { id: 15, src: bobPortrait, title: "bobPortrait", alt: "Pencil drawing of a ginger cat", styles: "tall wide" },
+            { id: 16, src: jasperPortrait, title: "jasperPortrait", alt: "Pencil drawing of a white cat with ginger patches" }
         ]
     },
     {
         header: "Paintings",
         images: [
-            { id: 16, src: foyleView, title: "kiilywoolFoyleView", alt: "Oil painting of the view over the Foyle river", styles: "wide" },
-            { id: 17, src: churchPoint, title: "churchPoint", alt: "Oil painting of the view of Castleward Bay at dusk", styles: "tall wide" },
-            { id: 18, src: caledonianMacBrayne, title: "caledonianMacBrayne", alt: "Oil painting of the Ferry in Ullapool", styles: "wide" },
-            { id: 19, src: honeyPortrait, title: "honeyPortrait", alt: "Oil painting of a dog on the beach", styles: "wide" },
-            { id: 20, src: stemWatercolour, title: "stemWatercolour", alt: "Stylised watercolour of a Kayak in Croatia" },
-            { id: 21, src: cavtatWatercolour, title: "cavtatWatercolour", alt: "Stylised watercolour of green stems" }
+            { id: 17, src: foyleView, title: "kiilywoolFoyleView", alt: "Oil painting of the view over the Foyle river", styles: "wide" },
+            { id: 18, src: gluggleJug, title: "gluggleJug", alt: "Stylised watercolour of a blue Gluggle Jug", styles: "tall" },
+            { id: 19, src: churchPoint, title: "churchPoint", alt: "Oil painting of the view of Castleward Bay at dusk", styles: "tall wide" },
+            { id: 20, src: caledonianMacBrayne, title: "caledonianMacBrayne", alt: "Oil painting of the Ferry in Ullapool", styles: "wide" },
+            { id: 21, src: honeyPortrait, title: "honeyPortrait", alt: "Oil painting of a dog on the beach", styles: "wide" },
+            { id: 22, src: stemWatercolour, title: "stemWatercolour", alt: "Stylised watercolour of green stems" }
         ]
     }
 ]
