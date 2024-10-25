@@ -6,9 +6,8 @@ const AboutPage = () => {
     return (
         <div className="aboutContainer">
             <SidebarComponent/>
-            <div className="aboutContent">
+            <main className="aboutContent" aria-label="About Page Content">
                 <h2>ABOUT</h2>
-                <hr/>
                 <h3>Hi, I’m Orla.</h3>
                 <p>A Web Engineer based in Edinburgh.</p>
                 <p>I received my MEng in Computer Science from Queen’s University Belfast in 2023.</p>
@@ -16,8 +15,8 @@ const AboutPage = () => {
                 <p>For my art I mostly use colouring pencils but also love watercolours and markers.</p>
                 <p>I am passionate about combining my love of art and design with technology.</p>
                 <p>Currently, I'm focused on creating websites that highlight this unique combination.</p>
-                <FooterComponent/>
-            </div>
+                <FooterComponent aria-label="About Page Footer"/>
+            </main>
         </div>
     );
 };

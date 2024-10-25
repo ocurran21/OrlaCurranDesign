@@ -30,7 +30,7 @@
 }
 
 .nextButton {
-    display: flex;
-    justify-content: flex-end;
+    position: fixed;
+    top: calc(50vh - 92px);
     margin-right: 32px;
 }
