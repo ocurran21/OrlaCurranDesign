@@ -38,13 +38,13 @@ const HomePage = () => {
 
     return (
         <div className="homePage">
-            <header className="homeContainer">
+            <main className="homeContainer" aria-label="Home Page Content">
                 <SidebarComponent colourClassName={colourClassName}/>
-                <div className="homeContent">
+                <section className="homeContent">
                     <PageTitleComponent colourClassName={titleClassName}/>
-                    <FooterComponent/>
-                </div>
-            </header>
+                    <FooterComponent aria-label="Home Page Footer"/>
+                </section>
+            </main>
         </div>
     );
 };
