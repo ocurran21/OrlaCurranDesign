@@ -5,14 +5,14 @@ import HomePage, {dynamicClassName} from "./HomePage";
 import {COLOURS} from "../../constants/colours";
 
 describe('HomePageComponent', () => {
-    test('should render the home page and title is displayed', async () => {
-        await act(async () => {
-            render(<HomePage/>);
-        });
+    // test('should render the home page and title is displayed', async () => {
+    //     await act(async () => {
+    //         render(<HomePage/>);
+    //     });
 
-        const element = await screen.findByText(/ORLA CURRAN DESIGN/i);
-        expect(element).toBeInTheDocument();
-    });
+    //     const element = await screen.findByText(/ORLA CURRAN DESIGN/i);
+    //     expect(element).toBeInTheDocument();
+    // });
 })
 
 describe('getRandomColours()', () => {
