@@ -1,7 +1,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { ROUTES } from './constants/routes';
-import { Analytics } from '@vercel/analytics/react'
+import { Analytics } from "@vercel/analytics/react";
 import HomePage from "./pages/HomePage/HomePage";
 import GalleryPage from "./pages/GalleryPage/GalleryPage"
 import AboutPage from "./pages/AboutPage/AboutPage"
@@ -23,14 +22,13 @@ function App() {
     }, []);
 
     return (
-        <>
-            <Routes>
-            <Route path={ROUTES.home} element={<HomePage/>} />
-            <Route path={ROUTES.gallery} element={<GalleryPage/>} />
-            <Route path={ROUTES.about} element={<AboutPage/>} />
-            </Routes>
-            <Analytics />
-        </>
+        <Analytics>
+        <Routes>
+            <Route path="/" element={<HomePage/>} />
+            <Route path="/gallery" element={<GalleryPage/>} />
+            <Route path="/about" element={<AboutPage/>} />
+        </Routes>
+        </Analytics>
     );
 }
 

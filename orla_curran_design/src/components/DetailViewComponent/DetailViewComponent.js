@@ -44,7 +44,7 @@ const DetailViewComponent = ({ image }) => {
                 src={currentImage.src} 
                 alt={currentImage.alt} 
                 className="detailImage"
-            />
+                            />
             { currentImageIndex < totalNumberOfImages-1 && (
                 <div>
                     <button className="nextButton" onClick={handleNext}><img src={nextButton} alt="next arrow"/></button>
