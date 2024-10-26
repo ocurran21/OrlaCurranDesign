@@ -37,7 +37,7 @@ const DetailViewComponent = ({ image }) => {
         <div className="detailView">
             { currentImageIndex >= 1 && (
                 <div>
-                    <button className="previousButton" onClick={handlePrev}><img src={previousButton}/></button>
+                    <button className="previousButton" onClick={handlePrev}><img src={previousButton} alt="previous arrow"/></button>
                 </div>
             )}
             <img 
@@ -47,7 +47,7 @@ const DetailViewComponent = ({ image }) => {
             />
             { currentImageIndex < totalNumberOfImages-1 && (
                 <div>
-                    <button className="nextButton" onClick={handleNext}><img src={nextButton}/></button>
+                    <button className="nextButton" onClick={handleNext}><img src={nextButton} alt="next arrow"/></button>
                 </div>
             )}
         </div>
