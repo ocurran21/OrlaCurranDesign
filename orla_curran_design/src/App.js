@@ -23,13 +23,14 @@ function App() {
     }, []);
 
     return (
-        <Analytics>
+        <>
             <Routes>
             <Route path={ROUTES.home} element={<HomePage/>} />
             <Route path={ROUTES.gallery} element={<GalleryPage/>} />
             <Route path={ROUTES.about} element={<AboutPage/>} />
-        </Routes>
-        </Analytics>
+            </Routes>
+            <Analytics />
+        </>
     );
 }
 
