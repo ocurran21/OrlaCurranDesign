@@ -1,39 +1,51 @@
-.sidebarContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 480px;
-    height: 100vh;
-    margin: 0;
-}
-
-@media (max-width: 1000px) {
+.sidebarOpen {
     .sidebarContainer {
-        width: 360px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 480px;
+        height: 100vh;
+        margin: 0;
+        overflow-y: auto;
     }
-}
 
-@media (max-width: 860px) {
-    .sidebarContainer {
-        width: 100vw;
+    @media (max-width: 1000px) {
+        .sidebarContainer {
+            width: 360px;
+        }
     }
-}
 
-ul {
-    height: 320px;
-    font-family: "Dela Gothic One", sans-serif;
-    font-size: 48px;
-    list-style-type: none;
-    padding-inline-start: 0;
-}
+    @media (max-width: 860px) {
+        .sidebarContainer {
+            width: 100vw;
+        }
+    }
 
-.navSpacing {
-    margin-top: 60px;
-}
+    nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100%;
+        position: fixed;
+    }
 
-a {
-    text-decoration: none;
-    color: inherit;
+    ul {
+        height: 320px;
+        font-family: "Dela Gothic One", sans-serif;
+        font-size: 48px;
+        list-style-type: none;
+        padding-inline-start: 0;
+    }
+
+    .navSpacing {
+        margin-top: 60px;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
 }
 
 button {
@@ -41,9 +53,6 @@ button {
     height: 60px;
     position: fixed;
     top: 32px;
-    cursor: pointer;
-    border: none;
-    background: none;
 }
 
 .closeSidebarButton {
@@ -122,23 +131,10 @@ button {
 }
 
 .defaultSidebar {
-    width: 480px;
     color: #2d353b;
     background-color: #6f777c;
 
     .currentPage {
         color: #ffffff;
-    }
-}
-
-@media (max-width: 1000px) {
-    .defaultSidebar {
-        width: 360px;
-    }
-}
-
-@media (max-width: 860px) {
-    .defaultSidebar {
-        width: 100vw;
     }
 }

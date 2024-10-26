@@ -19,20 +19,22 @@ import closeArrowOrange from "../../resources/images/buttonImages/closeSidebar/L
 import openArrowOrange from "../../resources/images/buttonImages/openSidebar/RightArrowOrange.png"
 import closeArrowGrey from "../../resources/images/buttonImages/closeSidebar/LeftArrowGrey.png"
 import openArrowGrey from "../../resources/images/buttonImages/openSidebar/RightArrowGrey.png"
+import {COLOURS} from "../../constants/colours";
+import {ROUTES} from "../../constants/routes";
 
 const getButtonImage = (colourClassName) => {
     switch (colourClassName.colourClassName) {
-        case "redStyle":
+        case COLOURS.redStyle.className:
             return [closeArrowRed, openArrowRed];
-        case "tealStyle":
+        case COLOURS.tealStyle.className:
             return [closeArrowTeal, openArrowTeal];
-        case "purpleStyle":
+        case COLOURS.purpleStyle.className:
             return [closeArrowPurple, openArrowPurple];
-        case "blueStyle":
+        case COLOURS.blueStyle.className:
             return [closeArrowBlue, openArrowBlue];
-        case "greenStyle":
+        case COLOURS.greenStyle.className:
             return [closeArrowGreen, openArrowGreen];
-        case "orangeStyle":
+        case COLOURS.orangeStyle.className:
             return [closeArrowOrange, openArrowOrange];
         default:
             return [closeArrowGrey, openArrowGrey];
@@ -43,26 +45,17 @@ function NavBarOptions () {
     const location = useLocation();
 
     const getPage = () => {
-        switch (location.pathname) {
-            case "/":
-                return "home";
-            case "/gallery":
-                return "gallery";
-            case "/about":
-                return "about";
-            default:
-                return "home";
-        }
+        return location.pathname;
     }
 
-    const listGalleryClass = classNames("navSpacing", getPage() === 'gallery' ? "currentPage": "");
-    const listAboutClass = classNames("navSpacing", getPage() === 'about' ? "currentPage": "");
+    const listGalleryClass = classNames("navSpacing", getPage() === ROUTES.gallery ? "currentPage": "");
+    const listAboutClass = classNames("navSpacing", getPage() === ROUTES.about ? "currentPage": "");
 
     return (
         <ul>
-            <li className={getPage() === 'home' ? "currentPage" : ""}><Link to="/">HOME</Link></li>
-            <li className={listGalleryClass}><Link to="/gallery">GALLERY</Link></li>
-            <li className={listAboutClass}><Link to="/about">ABOUT</Link></li>
+            <li className={getPage() === ROUTES.home ? "currentPage" : ""}><Link to={ROUTES.home}>HOME</Link></li>
+            <li className={listGalleryClass}><Link to={ROUTES.gallery}>GALLERY</Link></li>
+            <li className={listAboutClass}><Link to={ROUTES.about}>ABOUT</Link></li>
         </ul>)
 }
 
@@ -78,7 +71,8 @@ const SidebarComponent = (colourClassName) => {
     }
 
     return (
-        <div className={colourClassName.colourClassName ? colourClassName.colourClassName : "defaultSidebar"}>
+        <div className={`${colourClassName.colourClassName ? colourClassName.colourClassName : "defaultSidebar"} 
+        ${showSidebar ? "sidebarOpen" : ""}`}>
             {showSidebar ?
                 <div className="sidebarContainer">
                     <nav>

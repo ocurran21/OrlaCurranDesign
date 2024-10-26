@@ -7,7 +7,6 @@ $titleLineHeightMobile: 64px;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
 
     h1 {
         font-family: "Modak", system-ui;
@@ -28,8 +27,6 @@ $titleLineHeightMobile: 64px;
         }
     }
 }
-
-
 
 .redStyleTitle {
     color: #fba4b2;

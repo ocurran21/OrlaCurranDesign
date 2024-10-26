@@ -2,5 +2,11 @@ html, body, #root {
     height: 100%;
     width: 100%;
     margin: 0;
-    overflow: hidden;
+    overflow-x: hidden;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
 }
