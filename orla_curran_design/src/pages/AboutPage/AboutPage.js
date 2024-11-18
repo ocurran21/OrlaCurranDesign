@@ -15,7 +15,7 @@ const AboutPage = () => {
                 <p>For my art I mostly use colouring pencils but also love watercolours and markers.</p>
                 <p>I am passionate about combining my love of art and design with technology.</p>
                 <p>Currently, I'm focused on creating websites that highlight this unique combination.</p>
-                <p><u>Contact me at: </u> <em>orlajcurran@gmail.com</em></p>
+                <p className="emailStyle"><u>Contact me at: <em>orlajcurran@gmail.com</em></u></p>
                 <FooterComponent aria-label="About Page Footer"/>
             </main>
         </div>
