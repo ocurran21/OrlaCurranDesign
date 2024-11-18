@@ -6,38 +6,38 @@ import "./SidebarComponent.scss"
 import classNames from 'classnames';
 
 import closeArrowRed from "../../resources/images/buttonImages/closeSidebar/LeftArrowRed.png"
-import openArrowRed from "../../resources/images/buttonImages/openSidebar/RightArrowRed.png"
+import openMenuRed from "../../resources/images/buttonImages/openSidebar/MenuRed.png"
 import closeArrowTeal from "../../resources/images/buttonImages/closeSidebar/LeftArrowTeal.png"
-import openArrowTeal from "../../resources/images/buttonImages/openSidebar/RightArrowTeal.png"
+import openMenuTeal from "../../resources/images/buttonImages/openSidebar/MenuTeal.png"
 import closeArrowPurple from "../../resources/images/buttonImages/closeSidebar/LeftArrowPurple.png"
-import openArrowPurple from "../../resources/images/buttonImages/openSidebar/RightArrowPurple.png"
+import openMenuPurple from "../../resources/images/buttonImages/openSidebar/MenuPurple.png"
 import closeArrowBlue from "../../resources/images/buttonImages/closeSidebar/LeftArrowBlue.png"
-import openArrowBlue from "../../resources/images/buttonImages/openSidebar/RightArrowBlue.png"
+import openMenuBlue from "../../resources/images/buttonImages/openSidebar/MenuBlue.png"
 import closeArrowGreen from "../../resources/images/buttonImages/closeSidebar/LeftArrowGreen.png"
-import openArrowGreen from "../../resources/images/buttonImages/openSidebar/RightArrowGreen.png"
+import openMenuGreen from "../../resources/images/buttonImages/openSidebar/MenuGreen.png"
 import closeArrowOrange from "../../resources/images/buttonImages/closeSidebar/LeftArrowOrange.png"
-import openArrowOrange from "../../resources/images/buttonImages/openSidebar/RightArrowOrange.png"
+import openMenuOrange from "../../resources/images/buttonImages/openSidebar/MenuOrange.png"
 import closeArrowGrey from "../../resources/images/buttonImages/closeSidebar/LeftArrowGrey.png"
-import openArrowGrey from "../../resources/images/buttonImages/openSidebar/RightArrowGrey.png"
+import openMenuGrey from "../../resources/images/buttonImages/openSidebar/MenuGrey.png"
 import {COLOURS} from "../../constants/colours";
 import {ROUTES} from "../../constants/routes";
 
 const getButtonImage = (colourClassName) => {
     switch (colourClassName.colourClassName) {
         case COLOURS.redStyle.className:
-            return [closeArrowRed, openArrowRed];
+            return [closeArrowRed, openMenuRed];
         case COLOURS.tealStyle.className:
-            return [closeArrowTeal, openArrowTeal];
+            return [closeArrowTeal, openMenuTeal];
         case COLOURS.purpleStyle.className:
-            return [closeArrowPurple, openArrowPurple];
+            return [closeArrowPurple, openMenuPurple];
         case COLOURS.blueStyle.className:
-            return [closeArrowBlue, openArrowBlue];
+            return [closeArrowBlue, openMenuBlue];
         case COLOURS.greenStyle.className:
-            return [closeArrowGreen, openArrowGreen];
+            return [closeArrowGreen, openMenuGreen];
         case COLOURS.orangeStyle.className:
-            return [closeArrowOrange, openArrowOrange];
+            return [closeArrowOrange, openMenuOrange];
         default:
-            return [closeArrowGrey, openArrowGrey];
+            return [closeArrowGrey, openMenuGrey];
     }
 }
 
