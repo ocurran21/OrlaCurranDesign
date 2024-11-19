@@ -45,7 +45,7 @@ const GalleryPage = () => {
           {showDetailView && selectedImage && (
             <div>
               <DetailViewComponent image={selectedImage}/>
-              <button onClick={closeDetailView} className="closeButton"><img src={closeButton}/></button>
+              <button onClick={closeDetailView} className="closeButton"><img src={closeButton} alt=""/></button>
             </div>
           )}
           <FooterComponent />
