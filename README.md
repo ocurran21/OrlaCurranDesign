@@ -1,4 +1,4 @@
-# Orla Curran Design
+# Orla Curran Art
 
 Orla Curran Design is a React Web Application to display artwork. It leverages JavaScript, Sass, Jest, and CI/CD pipelines, and is deployed using Vercel.  Visit the site here https://www.orlacurranart.co.uk/.
 
