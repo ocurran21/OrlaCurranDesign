@@ -11,7 +11,7 @@ Orla Curran Design is a React Web Application to display artwork. It leverages J
 
 ## Lessons Learned
 - Learned to avoid React re-render loops using useEffect or useState by carefully considering logic.
-- Realiseed the need for a more test-driven approach for future projects.
+- Realised the need for a more test-driven approach for future projects.
 - A more simple colour palette is better for accessibility and consistency. It is important to consider accessibility from the beginning.
 
 ## Running
