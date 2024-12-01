@@ -31,12 +31,11 @@ const GalleryPage = () => {
               <p className={index === 0 ? "topHeader" : ""}>{section.header}</p>
               <section className="galleryGrid">
                 {section.images.map((image) => (
-                  <img
-                    key={image.id}
-                    src={image.src}
-                    alt={image.alt}
-                    className={image.styles}
-                    onClick={() => openDetailView(image)}
+                  <img key={image.id}
+                       src={image.src}
+                       alt={image.alt}
+                       className={image.styles}
+                       onClick={() => openDetailView(image)}
                   />
                 ))}
               </section>

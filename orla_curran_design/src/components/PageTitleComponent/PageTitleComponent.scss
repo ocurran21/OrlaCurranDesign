@@ -17,10 +17,8 @@ $titleLineHeightMobile: 64px;
         width: 480px;
         transform: skewY(-16deg);
         text-align: center;
-    }
 
-    @media (max-width: 700px) {
-        h1 {
+        @media (max-width: 700px) {
             font-size: $titleSizeMobile;
             line-height: $titleLineHeightMobile/$titleSizeMobile;
             width: 360px;
