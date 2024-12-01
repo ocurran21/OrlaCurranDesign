@@ -9,17 +9,9 @@
         overflow-y: auto;
     }
 
-    @media (max-width: 1000px) {
-        .sidebarContainer {
-            width: 360px;
-        }
-    }
+    @media ( max-width: 1000px ) { width: 360px; }
 
-    @media (max-width: 860px) {
-        .sidebarContainer {
-            width: 100vw;
-        }
-    }
+    @media ( max-width: 860px ) { width: 100vw; }
 
     nav {
         display: flex;
@@ -57,20 +49,16 @@ button {
 
 .closeSidebarButton {
     left: 388px;
-}
 
-@media (max-width: 1000px) {
-    .closeSidebarButton {
-        left: 268px;
+    @media ( max-width: 1000px ) { left: 268px; }
+
+    @media ( max-width: 860px ) {
+            right: 32px;
+            left: unset;
     }
 }
 
-@media (max-width: 860px) {
-    .closeSidebarButton {
-        right: 32px;
-        left: unset;
-    }
-}
+
 
 .openSidebarButton {
     left: 32px;

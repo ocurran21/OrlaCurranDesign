@@ -14,6 +14,8 @@
         left: 32px;
         top: 50%; 
         transform: translateY(-50%);
+
+        @media ( max-width: 500px ) { left: 8px; }
     }
     
     .nextButton {
@@ -21,18 +23,8 @@
         right: 32px;
         top: 50%; 
         transform: translateY(-50%);
-    }
-}
 
-@media (max-width: 500px) {
-    .detailView {
-        .previousButton {
-            left: 8px;
-        }
-    
-        .nextButton {
-            right: 8px;
-        }
+        @media ( max-width: 500px ) { right: 8px; }
     }
 }
 
@@ -41,10 +33,6 @@
     max-width: 80vw;
     max-height: 100vh;
     object-fit: contain;
-}
 
-@media (min-width: 1500px) {
-    .detailImage {
-        max-height: 70vh;
-    }
+    @media ( min-width: 1500px ) { max-height: 70vh; }
 }

@@ -5,57 +5,53 @@ import "./SidebarComponent.scss"
 
 import classNames from 'classnames';
 
-import closeArrowRed from "../../resources/images/buttonImages/closeSidebar/LeftArrowRed.png"
-import openMenuRed from "../../resources/images/buttonImages/openSidebar/MenuRed.png"
-import closeArrowTeal from "../../resources/images/buttonImages/closeSidebar/LeftArrowTeal.png"
-import openMenuTeal from "../../resources/images/buttonImages/openSidebar/MenuTeal.png"
-import closeArrowPurple from "../../resources/images/buttonImages/closeSidebar/LeftArrowPurple.png"
-import openMenuPurple from "../../resources/images/buttonImages/openSidebar/MenuPurple.png"
-import closeArrowBlue from "../../resources/images/buttonImages/closeSidebar/LeftArrowBlue.png"
-import openMenuBlue from "../../resources/images/buttonImages/openSidebar/MenuBlue.png"
-import closeArrowGreen from "../../resources/images/buttonImages/closeSidebar/LeftArrowGreen.png"
-import openMenuGreen from "../../resources/images/buttonImages/openSidebar/MenuGreen.png"
-import closeArrowOrange from "../../resources/images/buttonImages/closeSidebar/LeftArrowOrange.png"
-import openMenuOrange from "../../resources/images/buttonImages/openSidebar/MenuOrange.png"
-import closeArrowGrey from "../../resources/images/buttonImages/closeSidebar/LeftArrowGrey.png"
-import openMenuGrey from "../../resources/images/buttonImages/openSidebar/MenuGrey.png"
+import { BUTTONS } from '../../constants/buttons';
 import {COLOURS} from "../../constants/colours";
 import {ROUTES} from "../../constants/routes";
 
 const getButtonImage = (colourClassName) => {
     switch (colourClassName.colourClassName) {
         case COLOURS.redStyle.className:
-            return [closeArrowRed, openMenuRed];
+            return [BUTTONS.redStyleButtons.closeMenu, BUTTONS.redStyleButtons.openMenu];
         case COLOURS.tealStyle.className:
-            return [closeArrowTeal, openMenuTeal];
+            return [BUTTONS.tealStyleButtons.closeMenu, BUTTONS.tealStyleButtons.openMenu];
         case COLOURS.purpleStyle.className:
-            return [closeArrowPurple, openMenuPurple];
+            return [BUTTONS.purpleStyleButtons.closeMenu, BUTTONS.purpleStyleButtons.openMenu];
         case COLOURS.blueStyle.className:
-            return [closeArrowBlue, openMenuBlue];
+            return [BUTTONS.blueStyleButtons.closeMenu, BUTTONS.blueStyleButtons.openMenu];
         case COLOURS.greenStyle.className:
-            return [closeArrowGreen, openMenuGreen];
+            return [BUTTONS.greenStyleButtons.closeMenu, BUTTONS.greenStyleButtons.openMenu];
         case COLOURS.orangeStyle.className:
-            return [closeArrowOrange, openMenuOrange];
+            return [BUTTONS.orangeStyleButtons.closeMenu, BUTTONS.orangeStyleButtons.openMenu];
         default:
-            return [closeArrowGrey, openMenuGrey];
+            return [BUTTONS.defaultButtons.closeMenu, BUTTONS.defaultButtons.openMenu];
     }
 }
 
+const location = useLocation();
+
+const getPage = () => {
+    return location.pathname;
+}
+
+const getHomeNavClasses = () => {
+    return getPage() === ROUTES.home ? "currentPage" : "" 
+}
+
+const getGalleryNavClasses = () => {
+    return classNames("navSpacing", getPage() === ROUTES.gallery ? "currentPage": "");
+}
+
+const getAboutNavClasses = () => {
+    return classNames("navSpacing", getPage() === ROUTES.about ? "currentPage": "");
+}
+
 function NavBarOptions () {
-    const location = useLocation();
-
-    const getPage = () => {
-        return location.pathname;
-    }
-
-    const listGalleryClass = classNames("navSpacing", getPage() === ROUTES.gallery ? "currentPage": "");
-    const listAboutClass = classNames("navSpacing", getPage() === ROUTES.about ? "currentPage": "");
-
     return (
         <ul>
-            <li className={getPage() === ROUTES.home ? "currentPage" : ""}><Link to={ROUTES.home}>HOME</Link></li>
-            <li className={listGalleryClass}><Link to={ROUTES.gallery}>GALLERY</Link></li>
-            <li className={listAboutClass}><Link to={ROUTES.about}>ABOUT</Link></li>
+            <li className={getHomeNavClasses}><Link to={ROUTES.home}>HOME</Link></li>
+            <li className={getGalleryNavClasses}><Link to={ROUTES.gallery}>GALLERY</Link></li>
+            <li className={getAboutNavClasses}><Link to={ROUTES.about}>ABOUT</Link></li>
         </ul>)
 }
 

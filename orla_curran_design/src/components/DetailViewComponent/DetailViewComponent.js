@@ -19,10 +19,18 @@ const DetailViewComponent = ({ image }) => {
         }
     };
 
+    const hasNext = () => {
+        return currentImageIndex >= 1;
+    }
+
     const handleNext = () => {
         if (currentImageIndex < totalNumberOfImages - 1) {
             setCurrentImageIndex(currentImageIndex + 1);
         }
+    }
+
+    const hasPrev = () => {
+        return currentImageIndex < totalNumberOfImages - 1;
     }
 
     const handlePrev = () => {
@@ -35,7 +43,7 @@ const DetailViewComponent = ({ image }) => {
 
     return (
         <div className="detailView">
-            { currentImageIndex >= 1 && (
+            { hasNext && (
                 <div>
                     <button className="previousButton" onClick={handlePrev}><img src={previousButton} alt="previous arrow"/></button>
                 </div>
@@ -45,7 +53,7 @@ const DetailViewComponent = ({ image }) => {
                 alt={currentImage.alt} 
                 className="detailImage"
                             />
-            { currentImageIndex < totalNumberOfImages-1 && (
+            { hasPrev && (
                 <div>
                     <button className="nextButton" onClick={handleNext}><img src={nextButton} alt="next arrow"/></button>
                 </div>
