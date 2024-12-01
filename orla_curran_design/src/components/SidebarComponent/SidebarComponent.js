@@ -28,30 +28,31 @@ const getButtonImage = (colourClassName) => {
     }
 }
 
-const location = useLocation();
-
-const getPage = () => {
-    return location.pathname;
-}
-
-const getHomeNavClasses = () => {
-    return getPage() === ROUTES.home ? "currentPage" : "" 
-}
-
-const getGalleryNavClasses = () => {
-    return classNames("navSpacing", getPage() === ROUTES.gallery ? "currentPage": "");
-}
-
-const getAboutNavClasses = () => {
-    return classNames("navSpacing", getPage() === ROUTES.about ? "currentPage": "");
-}
-
 function NavBarOptions () {
+
+    const location = useLocation();
+
+    const getPage = () => {
+        return location.pathname;
+    }
+
+    const getHomeNavClasses = () => {
+        return getPage() === ROUTES.home ? "currentPage" : ""; 
+    }
+    
+    const getGalleryNavClasses = () => {
+        return classNames("navSpacing", getPage() === ROUTES.gallery ? "currentPage": "");
+    }
+    
+    const getAboutNavClasses = () => {
+        return classNames("navSpacing", getPage() === ROUTES.about ? "currentPage": "");
+    }
+
     return (
         <ul>
-            <li className={getHomeNavClasses}><Link to={ROUTES.home}>HOME</Link></li>
-            <li className={getGalleryNavClasses}><Link to={ROUTES.gallery}>GALLERY</Link></li>
-            <li className={getAboutNavClasses}><Link to={ROUTES.about}>ABOUT</Link></li>
+            <li className = { getHomeNavClasses() }><Link to = { ROUTES.home }>HOME</Link></li>
+            <li className = { getGalleryNavClasses() }><Link to = { ROUTES.gallery }>GALLERY</Link></li>
+            <li className = { getAboutNavClasses() }><Link to = { ROUTES.about }>ABOUT</Link></li>
         </ul>)
 }
 
