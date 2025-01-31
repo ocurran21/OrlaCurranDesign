@@ -4,6 +4,7 @@ import pepperDrawing from "../resources/images/art/stillLife/pepper.png"
 import pomegranateDrawing from "../resources/images/art/stillLife/pomegranate.png"
 import dragonTreeDrawing from "../resources/images/art/stillLife/dragonTree.png"
 import plumDrawing from "../resources/images/art/stillLife/plum.png"
+import orangeDrawing from "../resources/images/art/stillLife/orange.png"
 
 import owenProfile from "../resources/images/art/portraiture/owenOrange.png"
 import blueNude from "../resources/images/art/lifeDrawing/blueLifeDrawing.png"
@@ -26,6 +27,8 @@ import honeyPortrait from "../resources/images/art/paintings/honeyPortrait.png"
 import stemWatercolour from "../resources/images/art/watercolour/watercolourStems.png"
 import gluggleJug from "../resources/images/art/paintings/gluggleJug.png"
 
+import gibbsIslandView from "../resources/images/art/digital/gibbsIsland.PNG"
+
 const sections = [
     {
         header: "Still Life",
@@ -35,40 +38,47 @@ const sections = [
             { id: 2, src: pepperDrawing, title: "pepperDrawing", alt: "Coloured Pencil Sketch of a Red Pepper" },
             { id: 3, src: pomegranateDrawing, title: "pomegranateDrawing", alt: "Coloured Pencil Sketch of a Pomegranate", styles: "tall wide" },
             { id: 4, src: dragonTreeDrawing, title: "dragonTreeDrawing", alt: "Coloured Pencil Sketch of a potted Dragon Tree", styles: "tall" },
-            { id: 5, src: plumDrawing, title: "plumDrawing", alt: "Coloured Pencil Sketch of a Plum", styles: "tall" }
+            { id: 5, src: plumDrawing, title: "plumDrawing", alt: "Coloured Pencil Sketch of a Plum", styles: "tall" },
+            { id: 6, src: orangeDrawing, title: "orangeDrawing", alt: "Coloured Pencil Sketch of an orange and cross sections", styles: "wide" }
         ]
     },
     {
         header: "Portraiture & Life Drawing",
         images: [
-            { id: 6, src: owenProfile, title: "owenProfile", alt: "Orange pencil sketch of a man's side profile", styles: "tall wide" },
-            { id: 7, src: blueNude, title: "blueNude", alt: "Blue life drawing of a man", styles: "tall" },
-            { id: 8, src: goldNude, title: "goldNude", alt: "Gold life drawing of a man", styles: "wide" },
-            { id: 9, src: greenNude, title: "greenNude", alt: "Green life drawing of a woman", styles: "tall" },
-            { id: 10, src: pencilSketchNude, title: "pencilSketchNude", alt: "Pencil Sketch life drawing of a woman" },
-            { id: 11, src: selfPortrait, title: "selfPortrait", alt: "Rough sketch self portrait in red"}
+            { id: 7, src: owenProfile, title: "owenProfile", alt: "Orange pencil sketch of a man's side profile", styles: "tall wide" },
+            { id: 8, src: blueNude, title: "blueNude", alt: "Blue life drawing of a man", styles: "tall" },
+            { id: 9, src: goldNude, title: "goldNude", alt: "Gold life drawing of a man", styles: "wide" },
+            { id: 10, src: greenNude, title: "greenNude", alt: "Green life drawing of a woman", styles: "tall" },
+            { id: 11, src: pencilSketchNude, title: "pencilSketchNude", alt: "Pencil Sketch life drawing of a woman" },
+            { id: 12, src: selfPortrait, title: "selfPortrait", alt: "Rough sketch self portrait in red"}
         ]
     },
     {
         header: "Animal Sketches",
         images: [
-            { id: 12, src: blueSquirrel, title: "blueSquirrel", alt: "Blue pencil drawing of a squirrel", styles: "wide" },
-            { id: 13, src: tanithProfile, title: "tanithProfile", alt: "Pencil drawing of a Siamese cat" },
-            { id: 14, src: tanithPortrait, title: "tanithPortrait", alt: "Pencil drawing of a Siamese cat", styles: "wide" },
-            { id: 15, src: bobPortrait, title: "bobPortrait", alt: "Pencil drawing of a ginger cat", styles: "tall wide" },
-            { id: 16, src: jasperPortrait, title: "jasperPortrait", alt: "Pencil drawing of a white cat with ginger patches" },
-            { id: 17, src: honeyPencil, title: "honeyPencil", alt: "Pencil drawing of a brown and white dog", styles: "tall"}
+            { id: 13, src: blueSquirrel, title: "blueSquirrel", alt: "Blue pencil drawing of a squirrel", styles: "wide" },
+            { id: 14, src: tanithProfile, title: "tanithProfile", alt: "Pencil drawing of a Siamese cat" },
+            { id: 15, src: tanithPortrait, title: "tanithPortrait", alt: "Pencil drawing of a Siamese cat", styles: "wide" },
+            { id: 16, src: bobPortrait, title: "bobPortrait", alt: "Pencil drawing of a ginger cat", styles: "tall wide" },
+            { id: 17, src: jasperPortrait, title: "jasperPortrait", alt: "Pencil drawing of a white cat with ginger patches" },
+            { id: 18, src: honeyPencil, title: "honeyPencil", alt: "Pencil drawing of a brown and white dog", styles: "tall"}
         ]
     },
     {
         header: "Paintings",
         images: [
-            { id: 18, src: foyleView, title: "kiilywoolFoyleView", alt: "Oil painting of the view over the Foyle river", styles: "wide" },
-            { id: 19, src: gluggleJug, title: "gluggleJug", alt: "Stylised watercolour of a blue Gluggle Jug", styles: "tall" },
-            { id: 20, src: churchPoint, title: "churchPoint", alt: "Oil painting of the view of Castleward Bay at dusk", styles: "tall wide" },
-            { id: 21, src: caledonianMacBrayne, title: "caledonianMacBrayne", alt: "Oil painting of the Ferry in Ullapool", styles: "wide" },
-            { id: 22, src: honeyPortrait, title: "honeyPortrait", alt: "Oil painting of a dog on the beach" },
-            { id: 23, src: stemWatercolour, title: "stemWatercolour", alt: "Stylised watercolour of green stems" }
+            { id: 19, src: foyleView, title: "kiilywoolFoyleView", alt: "Oil painting of the view over the Foyle river", styles: "wide" },
+            { id: 20, src: gluggleJug, title: "gluggleJug", alt: "Stylised watercolour of a blue Gluggle Jug", styles: "tall" },
+            { id: 21, src: churchPoint, title: "churchPoint", alt: "Oil painting of the view of Castleward Bay at dusk", styles: "tall wide" },
+            { id: 22, src: caledonianMacBrayne, title: "caledonianMacBrayne", alt: "Oil painting of the Ferry in Ullapool", styles: "wide" },
+            { id: 23, src: honeyPortrait, title: "honeyPortrait", alt: "Oil painting of a dog on the beach", styles: "wide" },
+            { id: 24, src: stemWatercolour, title: "stemWatercolour", alt: "Stylised watercolour of green stems" }
+        ]
+    },
+    {
+        header: "Digital Illustrations",
+        images: [
+            { id: 25, src: gibbsIslandView, title: "gibbsIslandView", alt: "Digital drawing of view from Gibb's Island", styles: "tall wide" }
         ]
     }
 ]
