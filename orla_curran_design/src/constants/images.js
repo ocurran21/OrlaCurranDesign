@@ -67,7 +67,7 @@ const sections = [
             { id: 19, src: gluggleJug, title: "gluggleJug", alt: "Stylised watercolour of a blue Gluggle Jug", styles: "tall" },
             { id: 20, src: churchPoint, title: "churchPoint", alt: "Oil painting of the view of Castleward Bay at dusk", styles: "tall wide" },
             { id: 21, src: caledonianMacBrayne, title: "caledonianMacBrayne", alt: "Oil painting of the Ferry in Ullapool", styles: "wide" },
-            { id: 22, src: honeyPortrait, title: "honeyPortrait", alt: "Oil painting of a dog on the beach", styles: "wide" },
+            { id: 22, src: honeyPortrait, title: "honeyPortrait", alt: "Oil painting of a dog on the beach" },
             { id: 23, src: stemWatercolour, title: "stemWatercolour", alt: "Stylised watercolour of green stems" }
         ]
     }
