@@ -7,11 +7,10 @@
         height: 100vh;
         margin: 0;
         overflow-y: auto;
+        
+        @media ( max-width: 1000px ) { width: 360px; }
+        @media ( max-width: 860px ) { width: 100vw; }
     }
-
-    @media ( max-width: 1000px ) { width: 360px; }
-
-    @media ( max-width: 860px ) { width: 100vw; }
 
     nav {
         display: flex;
