@@ -6,6 +6,7 @@ import sections from "../../constants/images";
 import {useState} from "react";
 
 import closeButton from "../../resources/images/buttonImages/close.png"
+import bloomAnimation from "../../resources/animations/bloomAnimation.mov"
 
 const GalleryPage = () => {
   const [showDetailView, setShowDetailView] = useState(false);
@@ -38,6 +39,9 @@ const GalleryPage = () => {
                        onClick={() => openDetailView(image)}
                   />
                 ))}
+                <video autoPlay loop>
+                  <source src={bloomAnimation} type="video/mp4"/>
+                </video>
               </section>
             </div>
           ))}

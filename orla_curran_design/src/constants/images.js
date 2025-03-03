@@ -22,6 +22,8 @@ import churchPoint from "../resources/images/art/paintings/churchPoint.png"
 import caledonianMacBrayne from "../resources/images/art/paintings/caledonianMacBrayne.png"
 import stemWatercolour from "../resources/images/art/watercolour/watercolourStems.png"
 import gibbsIslandView from "../resources/images/art/digital/gibbsIsland.PNG"
+import bouquetDrawing from "../resources/images/art/stillLife/bouquetDrawing.png"
+import gluggleJug from "../resources/images/art/stillLife/gluggleJug.png"
 
 const sections = [
     {
@@ -50,7 +52,9 @@ const sections = [
             { id: 20, src: churchPoint, title: "churchPoint", alt: "Oil painting of the view of Castleward Bay at dusk", styles: "tall wide" },
             { id: 21, src: caledonianMacBrayne, title: "caledonianMacBrayne", alt: "Oil painting of the Ferry in Ullapool", styles: "wide" },
             { id: 22, src: stemWatercolour, title: "stemWatercolour", alt: "Stylised watercolour of green stems" },
-            { id: 23, src: gibbsIslandView, title: "gibbsIslandView", alt: "Digital drawing of view from Gibb's Island", styles: "tall wide" }
+            { id: 23, src: gibbsIslandView, title: "gibbsIslandView", alt: "Digital drawing of view from Gibb's Island", styles: "tall wide" },
+            { id: 24, src: bouquetDrawing, title: "bouquetDrawing", alt: "Sketch of a bouquest of roses and lillies in a vase"},
+            { id: 25, src: gluggleJug, title: "gluggleJug", alt: "Sketch of my blue gluggle jug"}
         ]
     },
     // {
