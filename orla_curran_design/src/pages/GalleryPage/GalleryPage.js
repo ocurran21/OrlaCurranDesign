@@ -39,9 +39,9 @@ const GalleryPage = () => {
                        onClick={() => openDetailView(image)}
                   />
                 ))}
-                <video autoPlay loop>
+                {/* <video autoPlay loop>
                   <source src={bloomAnimation} type="video/mp4"/>
-                </video>
+                </video> */}
               </section>
             </div>
           ))}
